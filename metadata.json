@@ -1,0 +1,5 @@
+{
+  "name": "CropSense",
+  "description": "Real-Time CRM Machine Tracking & Farmer Services Platform",
+  "requestFramePermissions": ["geolocation"]
+}

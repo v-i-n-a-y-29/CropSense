@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-900 antialiased;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.data-grid-row {
+  @apply grid grid-cols-12 gap-4 p-4 border-b border-stone-200 items-center transition-colors hover:bg-stone-50;
+}
+
+.data-grid-header {
+  @apply grid grid-cols-12 gap-4 p-4 border-b border-stone-300 bg-stone-100 text-xs font-bold text-stone-500 uppercase tracking-wider;
+}
+
+/* Custom Leaflet Popup Styles */
+.custom-popup .leaflet-popup-content-wrapper {
+  @apply rounded-2xl shadow-xl border border-stone-100 p-0 overflow-hidden;
+}
+.custom-popup .leaflet-popup-content {
+  @apply m-0;
+}
+.custom-popup .leaflet-popup-tip {
+  @apply bg-white shadow-xl;
+}
