@@ -16,7 +16,7 @@ export default function Analytics() {
   if (!data) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
       </div>
     );
   }
@@ -33,7 +33,7 @@ export default function Analytics() {
             <Calendar className="w-5 h-5 mr-2 text-slate-400" />
             Oct 1 - Nov 5, 2023
           </button>
-          <button className="flex items-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 font-medium shadow-sm transition-colors">
+          <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 font-medium shadow-sm transition-colors">
             <Download className="w-5 h-5 mr-2" />
             Export Report
           </button>
@@ -122,7 +122,7 @@ export default function Analytics() {
                   yAxisId="left" 
                   dataKey="utilization" 
                   name="Machine Utilization (%)" 
-                  fill="#0ea5e9" 
+                  fill="#16a34a" 
                   radius={[4, 4, 0, 0]} 
                   barSize={30}
                 />

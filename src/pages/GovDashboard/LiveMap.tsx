@@ -139,8 +139,8 @@ export default function LiveMap() {
         {/* Filter Sidebar */}
         <div className="w-full lg:w-80 bg-white rounded-3xl shadow-sm border border-slate-200 p-8 flex flex-col overflow-y-auto">
           <div className="flex items-center mb-8 pb-4 border-b border-slate-100">
-            <div className="bg-sky-50 p-2 rounded-lg mr-3">
-              <Filter className="w-5 h-5 text-sky-600" />
+            <div className="bg-green-50 p-2 rounded-lg mr-3">
+              <Filter className="w-5 h-5 text-green-600" />
             </div>
             <h2 className="text-xl font-bold text-slate-800">Filters</h2>
           </div>
@@ -151,7 +151,7 @@ export default function LiveMap() {
               {(['Available', 'Active', 'Idle', 'Maintenance'] as MachineStatus[]).map(status => (
                 <label key={status} className="flex items-center cursor-pointer group">
                   <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center mr-4 transition-all
-                    ${filters.status.includes(status) ? 'bg-sky-500 border-sky-500 shadow-sm shadow-sky-200' : 'border-slate-300 group-hover:border-sky-400 bg-slate-50'}
+                    ${filters.status.includes(status) ? 'bg-green-600 border-green-600 shadow-sm shadow-green-200' : 'border-slate-300 group-hover:border-green-400 bg-slate-50'}
                   `}>
                     {filters.status.includes(status) && <Check className="w-4 h-4 text-white" />}
                   </div>
@@ -167,7 +167,7 @@ export default function LiveMap() {
               {types.map(type => (
                 <label key={type} className="flex items-center cursor-pointer group">
                   <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center mr-4 transition-all
-                    ${filters.type.includes(type) ? 'bg-sky-500 border-sky-500 shadow-sm shadow-sky-200' : 'border-slate-300 group-hover:border-sky-400 bg-slate-50'}
+                    ${filters.type.includes(type) ? 'bg-green-600 border-green-600 shadow-sm shadow-green-200' : 'border-slate-300 group-hover:border-green-400 bg-slate-50'}
                   `}>
                     {filters.type.includes(type) && <Check className="w-4 h-4 text-white" />}
                   </div>

@@ -16,10 +16,10 @@ export default function GovDashboard() {
   return (
     <div className="flex h-screen bg-slate-100 overflow-hidden">
       {/* Sidebar */}
-      <aside className="w-64 bg-slate-900 text-slate-300 flex flex-col shadow-xl z-20">
-        <div className="h-16 flex items-center px-6 border-b border-slate-800 bg-slate-950">
-          <LayoutDashboard className="w-6 h-6 text-sky-500 mr-3" />
-          <span className="text-xl font-bold text-white tracking-tight">CropSense Admin</span>
+      <aside className="w-64 bg-white border-r border-slate-200 flex flex-col shadow-sm z-20">
+        <div className="h-16 flex items-center px-6 border-b border-slate-200">
+          <LayoutDashboard className="w-6 h-6 text-green-600 mr-3" />
+          <span className="text-xl font-bold text-slate-800 tracking-tight">CropSense Admin</span>
         </div>
         
         <div className="flex-1 overflow-y-auto py-6">
@@ -33,11 +33,11 @@ export default function GovDashboard() {
                   onClick={() => navigate(item.path)}
                   className={`w-full flex items-center px-4 py-3 rounded-xl transition-colors ${
                     isActive 
-                      ? 'bg-sky-500/10 text-sky-400 font-medium border border-sky-500/20' 
-                      : 'hover:bg-slate-800 hover:text-white'
+                      ? 'bg-green-50 text-green-700 font-medium border border-green-100' 
+                      : 'hover:bg-slate-50 text-slate-600'
                   }`}
                 >
-                  <Icon className={`w-5 h-5 mr-3 ${isActive ? 'text-sky-400' : 'text-slate-500'}`} />
+                  <Icon className={`w-5 h-5 mr-3 ${isActive ? 'text-green-600' : 'text-slate-400'}`} />
                   {item.label}
                 </button>
               );
@@ -45,19 +45,19 @@ export default function GovDashboard() {
           </nav>
         </div>
 
-        <div className="p-4 border-t border-slate-800">
-          <div className="flex items-center px-4 py-3 bg-slate-800/50 rounded-xl mb-4">
-            <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold mr-3">
+        <div className="p-4 border-t border-slate-200">
+          <div className="flex items-center px-4 py-3 bg-slate-50 rounded-xl mb-4">
+            <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold mr-3">
               DA
             </div>
             <div>
-              <p className="text-sm font-medium text-white">DA&FW Official</p>
+              <p className="text-sm font-medium text-slate-800">DA&FW Official</p>
               <p className="text-xs text-slate-500">Punjab Region</p>
             </div>
           </div>
           <button 
             onClick={() => navigate('/')}
-            className="w-full flex items-center px-4 py-2 text-slate-400 hover:text-red-400 transition-colors"
+            className="w-full flex items-center px-4 py-2 text-slate-500 hover:text-red-500 transition-colors"
           >
             <LogOut className="w-5 h-5 mr-3" />
             Logout
